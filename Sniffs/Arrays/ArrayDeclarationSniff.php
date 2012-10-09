@@ -393,8 +393,8 @@ class BigFish_Sniffs_Arrays_ArrayDeclarationSniff implements PHP_CodeSniffer_Sni
                 $indexContent = trim($index['index_content'], "'");
                 if (preg_match('|^[a-zA-Z0-9_]+$|', $indexContent) === 1) {
                     if (strtolower($indexContent) !== $indexContent) {
-                        $error = 'Array index "'.$indexContent.'" should not contain uppercase characters';
-                        $phpcsFile->addError($error, $index['index']);
+                        //$error = 'Array index "'.$indexContent.'" should not contain uppercase characters';
+                        //$phpcsFile->addError($error, $index['index']);
                     }
                 }
             }
