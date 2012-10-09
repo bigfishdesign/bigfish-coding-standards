@@ -21,7 +21,7 @@
  * @author    Greg Sherwood <gsherwood@squiz.net>
  * @author    Marc McIntyre <mmcintyre@squiz.net>
  */
-class WordPress_Sniffs_Functions_FunctionCallSignatureSniff implements PHP_CodeSniffer_Sniff
+class BigFish_Sniffs_Functions_FunctionCallSignatureSniff implements PHP_CodeSniffer_Sniff
 {
 	private $type;
 
@@ -114,15 +114,15 @@ class WordPress_Sniffs_Functions_FunctionCallSignatureSniff implements PHP_CodeS
      */
     public function processSingleLineCall(PHP_CodeSniffer_File $phpcsFile, $stackPtr, $openBracket, $tokens)
     {
-        if ($tokens[($openBracket + 1)]['code'] !== T_WHITESPACE && $tokens[($openBracket + 1)]['code'] !== T_CLOSE_PARENTHESIS) {
+        if ($tokens[($openBracket + 1)]['code'] === T_WHITESPACE && $tokens[($openBracket + 1)]['code'] !== T_CLOSE_PARENTHESIS) {
             // Checking this: $value = my_function([*]...).
-            $error = 'No space after opening parenthesis of function '.$this->type.' prohibited';
+            $error = 'Space after opening parenthesis of function '.$this->type.' prohibited';
             $phpcsFile->addError($error, $stackPtr);
         }
 
         $closer = $tokens[$openBracket]['parenthesis_closer'];
 
-        if ($tokens[($closer - 1)]['code'] !== T_WHITESPACE) {
+        if ($tokens[($closer - 1)]['code'] === T_WHITESPACE) {
             // Checking this: $value = my_function(...[*]).
             $between = $phpcsFile->findNext(T_WHITESPACE, ($openBracket + 1), null, true);
 
@@ -133,7 +133,7 @@ class WordPress_Sniffs_Functions_FunctionCallSignatureSniff implements PHP_CodeS
             // $value = my_function( ).
 
             if ($between !== $closer) {
-                $error = 'No space before closing parenthesis of function '.$this->type.' prohibited';
+                $error = 'Space before closing parenthesis of function '.$this->type.' prohibited';
                 $phpcsFile->addError($error, $closer);
             }
         }

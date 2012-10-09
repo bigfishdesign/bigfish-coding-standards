@@ -30,7 +30,7 @@
  * @version   Release: 1.2.0RC1
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-class WordPress_Sniffs_Formatting_MultipleStatementAlignmentSniff implements PHP_CodeSniffer_Sniff
+class BigFish_Sniffs_Formatting_MultipleStatementAlignmentSniff implements PHP_CodeSniffer_Sniff
 {
 
     /**

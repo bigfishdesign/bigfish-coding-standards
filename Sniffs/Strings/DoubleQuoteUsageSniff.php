@@ -28,7 +28,7 @@
  * @version   Release: 1.2.0RC1
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-class WordPress_Sniffs_Strings_DoubleQuoteUsageSniff implements PHP_CodeSniffer_Sniff
+class BigFish_Sniffs_Strings_DoubleQuoteUsageSniff implements PHP_CodeSniffer_Sniff
 {
     /**
      * Returns an array of tokens this test wants to listen for.

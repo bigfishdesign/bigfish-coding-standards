@@ -20,7 +20,7 @@
  * @author    Greg Sherwood <gsherwood@squiz.net>
  * @author    Marc McIntyre <mmcintyre@squiz.net>
  */
-class WordPress_Sniffs_Arrays_ArrayDeclarationSniff implements PHP_CodeSniffer_Sniff
+class BigFish_Sniffs_Arrays_ArrayDeclarationSniff implements PHP_CodeSniffer_Sniff
 {
 
 

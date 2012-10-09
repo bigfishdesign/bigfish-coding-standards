@@ -1,6 +1,6 @@
 <?php
 /**
- * WordPress_Sniffs_PHP_DiscouragedFunctionsSniff.
+ * BigFish_Sniffs_PHP_DiscouragedFunctionsSniff.
  *
  * PHP version 5
  *
@@ -14,7 +14,7 @@ if (class_exists('Generic_Sniffs_PHP_ForbiddenFunctionsSniff', true) === false) 
 }
 
 /**
- * WordPress_Sniffs_PHP_DiscouragedFunctionsSniff.
+ * BigFish_Sniffs_PHP_DiscouragedFunctionsSniff.
  *
  * Discourages the use of debug functions and suggests deprecated WordPress alternatives
  *
@@ -22,7 +22,7 @@ if (class_exists('Generic_Sniffs_PHP_ForbiddenFunctionsSniff', true) === false) 
  * @package   PHP_CodeSniffer
  * @author    John Godley
  */
-class WordPress_Sniffs_PHP_DiscouragedFunctionsSniff extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
+class BigFish_Sniffs_PHP_DiscouragedFunctionsSniff extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
 {
 
     /**

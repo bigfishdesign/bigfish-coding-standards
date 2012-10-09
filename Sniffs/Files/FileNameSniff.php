@@ -11,7 +11,7 @@
  */
 
 /**
- * WordPress_Sniffs_Files_FileNameSniff.
+ * BigFish_Sniffs_Files_FileNameSniff.
  *
  * Ensures filenames do not contain underscores
  *
@@ -20,7 +20,7 @@
  * @author    John Godley
  */
  
-class WordPress_Sniffs_Files_FileNameSniff implements PHP_CodeSniffer_Sniff
+class BigFish_Sniffs_Files_FileNameSniff implements PHP_CodeSniffer_Sniff
 {
     /**
      * Returns an array of tokens this test wants to listen for.

@@ -1,6 +1,6 @@
 <?php
 /**
- * WordPress_Sniffs_Whitespace_ScopeIndentSniff.
+ * BigFish_Sniffs_Whitespace_ScopeIndentSniff.
  *
  * PHP version 5
  *
@@ -10,7 +10,7 @@
  */
 
 /**
- * WordPress_Sniffs_WhiteSpace_ScopeIndentSniff.
+ * BigFish_Sniffs_WhiteSpace_ScopeIndentSniff.
  *
  * Checks that control structures are structured correctly, and their content
  * is indented correctly. 
@@ -22,7 +22,7 @@
  * @package   PHP_CodeSniffer
  * @author	Eric Andrew Lewis <eric.andrew.lewis@gmail.com>
  */
-class WordPress_Sniffs_WhiteSpace_ScopeIndentSniff implements PHP_CodeSniffer_Sniff
+class BigFish_Sniffs_WhiteSpace_ScopeIndentSniff implements PHP_CodeSniffer_Sniff
 {
 
 	/**
