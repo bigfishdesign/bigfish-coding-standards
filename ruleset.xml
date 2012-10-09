@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress">
- <description>A custom coding standard.</description>
+<ruleset name="BigFish">
+ <description>The official coding standards of Big Fish.</description>
 </ruleset>
 
 
