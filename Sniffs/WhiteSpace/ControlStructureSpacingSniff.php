@@ -76,7 +76,7 @@ class BigFish_Sniffs_WhiteSpace_ControlStructureSpacingSniff implements PHP_Code
 
         $scopeCloser = $tokens[$stackPtr]['scope_closer'];
         $scopeOpener = $tokens[$stackPtr]['scope_opener'];
-		
+
         $openBracket = $phpcsFile->findNext(PHP_CodeSniffer_Tokens::$emptyTokens, ($stackPtr + 1), null, true);
 
         if (($stackPtr + 1) === $openBracket) {
@@ -84,7 +84,7 @@ class BigFish_Sniffs_WhiteSpace_ControlStructureSpacingSniff implements PHP_Code
             $error = 'No space before opening parenthesis is prohibited';
             $phpcsFile->addError($error, $stackPtr);
         }
-		
+
 		if ($tokens[($openBracket + 1)]['code'] !== T_WHITESPACE && $tokens[($openBracket + 1)]['code'] !== T_CLOSE_PARENTHESIS) {
             // Checking this: $value = my_function([*]...).
             $error = 'No space after opening parenthesis is prohibited';
@@ -99,16 +99,16 @@ class BigFish_Sniffs_WhiteSpace_ControlStructureSpacingSniff implements PHP_Code
 					$error = 'No space before closing parenthesis is prohibited';
 					$phpcsFile->addError($error, $closer);
 			}
-			
+
 			$arrayLine = $tokens[$scopeOpener]['line'];
 
 			if (isset ($tokens[$arrayLine]['scope_opener']) && $tokens[$arrayLine]['line'] != $tokens[$tokens[$arrayLine]['scope_opener']]['line']) {
-				$error = 'Opening brace should be on the same line as the declaration';
-				$phpcsFile->addError($error, $openBracket);
-				return;
+				//$error = 'Opening brace should be on the same line as the declaration';
+				//$phpcsFile->addError($error, $openBracket);
+				//return;
 			}
 		}
-		
+
 
         $firstContent = $phpcsFile->findNext(T_WHITESPACE, ($scopeOpener + 1), null, true);
         if ($tokens[$firstContent]['line'] !== ($tokens[$scopeOpener]['line'] + 1) && $tokens[$firstContent]['code'] != T_CLOSE_TAG) {
