@@ -82,8 +82,8 @@ class BigFish_Sniffs_Arrays_ArrayDeclarationSniff implements PHP_CodeSniffer_Sni
 		        $openBracket = $phpcsFile->findNext(PHP_CodeSniffer_Tokens::$emptyTokens, ($stackPtr + 1), null, true);
 		        if ($tokens[($openBracket + 1)]['code'] !== T_WHITESPACE && $tokens[($openBracket + 1)]['code'] !== T_CLOSE_PARENTHESIS) {
             // Checking this: $value = my_function([*]...).
-            $error = 'No space after opening parenthesis of array prohibited';
-            $phpcsFile->addError($error, $stackPtr);
+            //$error = 'No space after opening parenthesis of array prohibited';
+            //$phpcsFile->addError($error, $stackPtr);
         }
 		        $closer = $tokens[$openBracket]['parenthesis_closer'];
 
@@ -98,8 +98,8 @@ class BigFish_Sniffs_Arrays_ArrayDeclarationSniff implements PHP_CodeSniffer_Sni
             // $value = my_function( ).
 
             if ($between !== $closer) {
-                $error = 'No space before closing parenthesis of array prohibited';
-                $phpcsFile->addError($error, $closer);
+                //$error = 'No space before closing parenthesis of array prohibited';
+                //$phpcsFile->addError($error, $closer);
             }
         }
 		
