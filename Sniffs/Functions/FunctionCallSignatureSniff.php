@@ -213,8 +213,8 @@ class BigFish_Sniffs_Functions_FunctionCallSignatureSniff implements PHP_CodeSni
                 }
 
                 if ($expectedIndent !== $foundIndent) {
-                    $error = "Multi-line function ".$this->type." not indented correctly; expected $expectedIndent spaces but found $foundIndent";
-                    $phpcsFile->addError($error, $i);
+                    // $error = "Multi-line function ".$this->type." not indented correctly; expected $expectedIndent spaces but found $foundIndent";
+                    // $phpcsFile->addError($error, $i);
                 }
             }//end if
         }//end for
