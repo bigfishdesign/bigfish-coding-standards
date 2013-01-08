@@ -13,5 +13,5 @@ Once you've installed PEAR, install CodeSniffer:
 
 Then install our coding standards:
 
-    git clone git://github.com/robmiller/bigfish-coding-standards.git $(pear config-get php_dir)/PHP/CodeSniffer/Standards/BigFish
+    git clone git://github.com/bigfishdesign/bigfish-coding-standards.git $(pear config-get php_dir)/PHP/CodeSniffer/Standards/BigFish
 
